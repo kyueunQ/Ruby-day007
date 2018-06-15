@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="text-center">
+        <a  class="btn btn-success" href="/ask/new">질문하기</a>
+    </div>
+    <ul class="list-group">
+        <% @questions.each do |question| %>
+        <li class="list-group-item"><%= question.question %><small><%= question.region %></small>
+        <a class="btn-primary" href="/ask/<%= question.id %>">보기</a>
+        <a class="btn-warning" href="/ask/<%= question.id %>/edit">수정</a>
+        <a data-confirm="이 글을 삭제하시겠습니까?" class="btn-danger" href="/ask/<%= question.id %>/delete">삭제</a>
+        </li>
+        
+        <% end %>
+    </ul>
+</div>

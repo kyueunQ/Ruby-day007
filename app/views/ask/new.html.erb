@@ -1,0 +1,6 @@
+<form action="/ask/create" method="POST">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+    <input type="text" name="question" placeholder="질문을 입력하세요.">
+    <input class="btn btn-primary" type="submit" value="등록하기"><br/><br/>
+    <a href="/ask">질문 전체 보기</a>
+</form>

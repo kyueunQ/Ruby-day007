@@ -1,0 +1,5 @@
+<form action="/ask/<%= @ask.id%>/update" method="POST">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+    <input type="text" name="question" value="<%= @ask.question %>">
+    <input class="btn btn-primary" type="submit" value="수정하기"><br/><br/>
+</form>
